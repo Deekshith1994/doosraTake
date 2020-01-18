@@ -1,0 +1,18 @@
+{% extends "public/templates/home_template.html"%}
+
+{%block homebody%}
+{%for post in posts%}
+
+
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ post.author.username }}</a>
+                </div>
+                <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
+                <p class="article-content">{{ post.content }}</p>
+            </div>
+        </div>
+    </article>
+{%endfor%}
+{%endblock homebody%}

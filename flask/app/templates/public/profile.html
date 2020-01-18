@@ -1,0 +1,9 @@
+{% extends "public/templates/home_template.html"%}
+
+{% block title%} Profile Page {%endblock title%}
+
+{% block homebody%}
+
+<h1>{{ current_user.username }}</h1>
+
+{%endblock homebody%}
