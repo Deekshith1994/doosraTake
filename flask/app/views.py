@@ -4,14 +4,14 @@ from app.forms import RegistrationForm, LoginForm, IPLPostMatchReviewForm, Selec
 from app.models import User, Post
 from flask_login import login_user, login_required, logout_user, current_user
 
-from firebase import firebase
-firebase = firebase.FirebaseApplication('https://doosratake-1da18.firebaseio.com/', None)
-new_user = 'Ozgur Vatansever'
-result = firebase.post('/users', new_user, {'print': 'pretty'}, {'X_FANCY_HEADER': 'VERY FANCY'})
-print (result)
+# from firebase import firebase
+# firebase = firebase.FirebaseApplication('https://doosratake-1da18.firebaseio.com/', None)
+# new_user = 'Ozgur Vatansever'
+# result = firebase.post('/users', new_user, {'print': 'pretty'}, {'X_FANCY_HEADER': 'VERY FANCY'})
+# print (result)
 
-result = firebase.post('/users', new_user, {'print': 'silent'}, {'X_FANCY_HEADER': 'VERY FANCY'})
-print (result == None)
+# result = firebase.post('/users', new_user, {'print': 'silent'}, {'X_FANCY_HEADER': 'VERY FANCY'})
+# print (result == None)
 
 @app.route("/", methods=['GET', 'POST'])
 @app.route("/home/")
