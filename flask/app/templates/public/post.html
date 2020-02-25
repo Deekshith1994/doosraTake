@@ -5,17 +5,17 @@
   <article class="media content-section">
     <div class="media-body">
       <div class="article-metadata">
-        <a class="mr-2" href="#">{{ post.author.username }}</a>
+        <a class="mr-2" href="#">{{ post.author.name }}</a>
         
-        {% if post.author == current_user %}
+        {% if post.author.username == current_user %}
           <div>
-            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="#">Update</a>
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('update_post', post_id=post.id)}}">Update</a>            
             <button type="button" class="btn btn-danger btn-sm m-1" data-toggle="modal" data-target="#deleteModal">Delete</button>
           </div>
         {% endif %}
       </div>
       <h2 class="article-title">{{ post.title }}</h2>
-      <p class="article-content">{{ post.content }}</p>
+      <p class="article-content">{{ post.content|safe }}</p>
     </div>
   </article>
   <!-- Modal -->

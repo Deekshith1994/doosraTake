@@ -1,13 +1,12 @@
 {% extends "public/templates/index.html"%}
 {% block title%} Home Page {%endblock title%}
 
-
-
-
 {%block navbar%}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="{{url_for('home')}}"><strong>Doosra Take</strong></a>
+    <a class="navbar-brand" href="{{url_for('home')}}"><img src="/static/img/doosratake_icon.png" alt="doosraTake" title="doosraTake"
+        width="150" height="45"></a>
 
+    
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -19,34 +18,11 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <ul class="navbar-nav mr-auto">
-
-                {% if isAuthenticated %}
-                {% if user == rkallem %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{url_for('profile')}}">Add Post </a>
-                </li>
-                {%endif%}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{url_for('profile')}}">Profile </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{url_for('logout')}}">Log Out</a>
-                </li>
-                {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{url_for('register')}}">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{url_for('login')}}">Log In</a>
-                </li>
-                {% endif %}
-
-                <a class="navbar-brand" href="#"><strong>|</strong></a>
-
+               
                 <li class="nav-item">
 
-                    <a class="nav-link" href="http://www.facebook.com/your.facebook.page">
-                        <img src="/static/img/fb_icon.png" alt="Friend us on Facebook" title="Find us on Facebook"
+                    <a class="nav-link" href="https://www.facebook.com/doosratake/">
+                        <img src="/static/img/fb_icon.png" alt="Find us on Facebook" title="Find us on Facebook"
                             width="25" height="25">
                     </a>
                 </li>
@@ -58,7 +34,7 @@
 {%endblock navbar%}
 
 
-
 {%block body%}
 {%block homebody%} {%endblock homebody%}
 {%endblock body%}
+

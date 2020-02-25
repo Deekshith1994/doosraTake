@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+    flask:
+        build: ./flask
+        container_name: flask
+        image: gcr.io/doosra-take/flask:v23
+        restart: always
+        environment:
+            - APP_NAME=doosraTakeApp
+        ports: 
+            - "5000:5000"
+
+    # nginx:
+    #     build: ./nginx
+    #     container_name: nginx
+    #     image: gcr.io/doosra-take/nginx:v15
+    #     restart: always
+    #     ports:
+    #         - "80:80"
+
+
+
