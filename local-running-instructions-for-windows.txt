@@ -1,0 +1,41 @@
+Step 1 : Run pip install -r requirements.txt
+
+Step 2 : Remove any erroring packages based on error logs in cmd
+
+Noteable errors are with 
+	pyrebase
+	pycryptodome
+
+Step 3 : Install any uninstalled packages in previous command by installing them manually using
+
+pip install "package name"
+
+Install pyrebase4
+
+Download pyrcrptodome-3.9.7 tar.gz from below location
+
+https://pypi.org/project/pycryptodome/#files
+
+Step 4 : Once all packages are installed, run below command from inside flask directory of code
+
+python run.py
+
+If there are SHA256 erros or HASH errors , 
+	Go to C:\Users\Username\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\
+	under this
+	create a backup of existing crypto folder by saving a copy of it in in your local
+	replace the crypto folder by removing it and pasting the crypto folder from pycryptodome in site packages
+
+Step 5 : Run command in step 4 again
+	
+	Replace the files in C:\Users\Username\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\crypto\util\_pycache_ from backup-crypto\crypto\Util\__pycache__
+	Replace the files in C:\Users\username\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\Crypto\Hash\__pycache__ from backup-crypto\crypto\Hash\__pycache__
+	
+	
+Step 6 : Based on errors comment out the lines in site pacakges
+
+Noteable : SHA256 error while running run.py can be overcome by commenting below lines
+
+#removed dependency on crypto by commenting below
+#from oauth2client.service_account import ServiceAccountCredentials 
+#from gcloud import storage
