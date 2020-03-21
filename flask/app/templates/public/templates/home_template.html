@@ -1,11 +1,12 @@
 {% extends "public/templates/index.html"%}
-{% block title%} Home Page {%endblock title%}
+{% block title%} doosraTake {%endblock title%}
 
 {%block navbar%}
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="{{url_for('home')}}"><img src="/static/img/doosratake_icon_2.png" alt="doosraTake" title="doosraTake"
-        width="150" height="45"></a>
+<!-- <nav class="navbar navbar-custom navbar-expand-lg navbar-dark">
 
+    <div class="container">
+        <a href="#" class="button blue">Welcome to doosraTake!!!</a>
+    </div> 
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,8 +30,32 @@
             </ul>
         </form>
     </div>
-</nav>
+</nav>  -->
 <br>
+
+<div id="mySidenav" class="sidenav">
+    <a class="navbar-brand" href="{{url_for('home')}}"><img src="/static/img/doosratake_icon_3.png" alt="doosraTake" title="doosraTake"
+        width="150" height="45"></a>
+    <a href="#">Series</a>
+    <a href="#">Articles</a>
+    <a href="#">Authors</a>
+    <a href="#">About</a>
+</div>
+
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.body.style.backgroundColor = "white";
+    }
+</script>
+
 {%endblock navbar%}
 
 
