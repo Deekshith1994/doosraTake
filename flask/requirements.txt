@@ -34,7 +34,7 @@ pylint==2.3.1
 pylint-flask==0.6
 pylint-plugin-utils==0.5
 Pyrebase==3.0.27
-python-jwt==2.0.1
+python-jwt==3.3.4
 requests==2.11.1
 requests-toolbelt==0.7.0
 rsa==4.0
